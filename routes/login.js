@@ -3,22 +3,15 @@ var mysql = require('mysql');
 var dbconfig = require('../config/database.js');
 var connection = mysql.createConnection(dbconfig);
 var router = express.Router();
-var react = require('react');
-var reactDOM = require('react-dom');
 
 /* GET home page. */
 
 router.get('/', function(req, res, next) {
-   /* connection.query('SELECT * from persons', function (error, results, fields) {
+    connection.query('SELECT * from persons', function (error, results, fields) {
         if (error) throw error;
         console.log('The solution is: ', results[0]);
-        res.send(results);
-    });*/
-
-    res.render('index', { title: 'Express'});
+        res.render('login', { title: 'Express', results : results[0].name });
+    });
 });
-
-
-
 
 module.exports = router;
