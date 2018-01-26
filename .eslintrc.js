@@ -1,3 +1,7 @@
 module.exports = {
-    "extends": "standard"
+    "extends": "standard",
+    rules : {
+        "semi" : 0,
+        "eol-last" : 0
+    }
 };
