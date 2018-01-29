@@ -6,7 +6,7 @@ module.exports  = {
         todo : './src/views/todo'
     },
     output : {
-        filename : 'index.bundle.js',
+        filename :'[name].bundle.js',
         path : path.resolve(__dirname, './public')
     },
     module : {
